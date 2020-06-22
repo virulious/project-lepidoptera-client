@@ -1,6 +1,6 @@
 {
   "name": "project-lepidoptera-client",
-  "homepage": "https://virulious.github.io/project-lepidoptera/",
+  "homepage": "https://virulious.github.io/project-lepidoptera-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
