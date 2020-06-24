@@ -66,7 +66,7 @@ class SignUp extends Component {
               />
             </Form.Group>
             <Form.Group controlId="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Password (Must be 5 or more characters)</Form.Label>
               <Form.Control
                 required
                 name="password"
