@@ -8,7 +8,8 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
-import Species from '../Species/Species'
+import Genus from '../Genus/Genus'
+import CreateSpecies from '../Species/CreateSpecies'
 
 class App extends Component {
   constructor () {
@@ -55,8 +56,11 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password/' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/species/' render={() => (
-            <Species msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/genus/' render={() => (
+            <Genus msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-species/' render={() => (
+            <CreateSpecies msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

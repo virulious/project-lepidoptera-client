@@ -54,9 +54,29 @@ export const changePassword = (passwords, user) => {
   })
 }
 
-export const createSpecies = (species, user) => {
+export const getGenus = (user) => {
+  return axios({
+    url: apiUrl + '/genus/',
+    method: 'GET',
+    headers: {
+      'Authorization': `Token ${user.token}`
+    }
+  })
+}
+
+export const getSpecies = (user) => {
   return axios({
     url: apiUrl + '/species/',
+    method: 'GET',
+    headers: {
+      'Authorization': `Token ${user.token}`
+    }
+  })
+}
+
+export const createSpecies = (species, user) => {
+  return axios({
+    url: apiUrl + '/create-species/',
     method: 'POST',
     headers: {
       'Authorization': `Token ${user.token}`
@@ -65,9 +85,19 @@ export const createSpecies = (species, user) => {
       species: {
         name: species.name,
         description: species.description,
-        upper: species.upper,
+        genus: species.genus,
         owner: species.owner
       }
+    }
+  })
+}
+
+export const oneSpecies = (species, user) => {
+  return axios({
+    url: apiUrl + '/species/' + species._id,
+    method: 'GET',
+    headers: {
+      'Authorization': `Token ${user.token}`
     }
   })
 }

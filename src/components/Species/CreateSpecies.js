@@ -7,15 +7,15 @@ import messages from '../AutoDismissAlert/messages'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-class Species extends Component {
-  constructor () {
-    super()
+class CreateSpecies extends Component {
+  constructor (props) {
+    super(props)
 
     this.state = {
       species: {
         name: '',
         description: '',
-        upper: '',
+        genus: '',
         owner: ''
       },
       createdSpeciesId: null
@@ -31,7 +31,7 @@ class Species extends Component {
 
     const { msgAlert, history } = this.props
 
-    createSpecies(this.state)
+    createSpecies(this.state.species, this.props.user)
       .then(res => this.setState({ createdSpeciesId: res.data.species._id }))
       .then(() => msgAlert({
         heading: 'Species created',
@@ -50,7 +50,7 @@ class Species extends Component {
   }
 
   render () {
-    const { name, description, upper } = this.state
+    const { name, description, genus } = this.state
 
     return (
       <div className="row">
@@ -79,13 +79,13 @@ class Species extends Component {
                 onChange={this.handleChange}
               />
             </Form.Group>
-            <Form.Group controlId="upper">
+            <Form.Group controlId="genus">
               <Form.Label>Species Genus</Form.Label>
               <Form.Control
                 required
                 type="text"
-                name="upper"
-                value={upper}
+                name="genus"
+                value={genus}
                 placeholder="Species Genus"
                 onChange={this.handleChange}
               />
@@ -103,4 +103,4 @@ class Species extends Component {
   }
 }
 
-export default withRouter(Species)
+export default withRouter(CreateSpecies)

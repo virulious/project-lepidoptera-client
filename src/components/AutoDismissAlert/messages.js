@@ -7,5 +7,7 @@ export default {
   changePasswordSuccess: 'Password changed successfully!',
   changePasswordFailure: 'Failed to change passwords. Check your old password and try again.',
   createSpeciesSuccess: 'Species created successfully!',
-  createSpeciesFailure: 'Failed to create Species'
+  createSpeciesFailure: 'Failed to create Species',
+  createGenusSuccess: 'Genus created successfully!',
+  createGenusFailure: 'Failed to create Genus'
 }
