@@ -37,4 +37,8 @@ Images
 
 ERD:
 
+[ERD](<blockquote class="imgur-embed-pub" lang="en" data-id="a/HmzECFI"><a href="//imgur.com/a/HmzECFI"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
+
 Wireframe:
+
+[Wireframe](<blockquote class="imgur-embed-pub" lang="en" data-id="a/Iyy9msw"><a href="//imgur.com/a/Iyy9msw"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
