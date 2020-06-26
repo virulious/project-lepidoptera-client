@@ -1,1 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
+
+$bargrad: linear-gradient(90deg, rgba(236,203,242,1) 0%, rgba(158,81,154,1) 50%, rgba(126,21,125,0.5704656862745099) 100%);
+
+.bargrad {
+  background: $bargrad;
+}
