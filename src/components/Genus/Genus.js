@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { getOneGenus, oneSpecies } from '../../api/auth'
+import { getGenus } from '../../api/auth'
 
 import Layout from '../layout/layout'
 
@@ -13,8 +13,8 @@ class Genus extends Component {
     }
   }
 
-  componentDidMount () {
-    getOneGenus(this.props.user)
+  componentDidMount (user) {
+    getGenus(user)
       .then(res => this.setState({ genus: res.data.genus }))
       .catch(console.error)
   }
@@ -22,7 +22,7 @@ class Genus extends Component {
   render () {
     const genus = this.state.genus.map(genus => (
       <li key={genus.id}>
-        <Link to={oneSpecies}>{oneSpecies.name}</Link>
+        <Link to={`/species/${genus.species.id}`}>{genus.species.name}</Link>
       </li>
     ))
 

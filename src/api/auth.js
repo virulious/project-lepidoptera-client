@@ -64,13 +64,6 @@ export const getGenus = (user) => {
   })
 }
 
-export const getOneGenus = (genus, user) => {
-  return axios({
-    url: apiUrl + '/genus/' + genus._id,
-    method: 'GET'
-  })
-}
-
 export const getSpecies = (user) => {
   return axios({
     url: apiUrl + '/species/',
