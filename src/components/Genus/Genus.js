@@ -13,7 +13,8 @@ class Genus extends Component {
     }
   }
 
-  componentDidMount (user) {
+  componentDidMount () {
+    const { user } = this.props
     getGenus(user)
       .then(res => this.setState({ genus: res.data.genus }))
       .catch(console.error)
