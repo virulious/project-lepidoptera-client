@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { getGenus } from '../../api/auth'
+import apiUrl from '../apiConfig'
 
 import Layout from '../layout/layout'
 
@@ -23,7 +24,7 @@ class Genus extends Component {
   render () {
     const genus = this.state.genus.map(genus => (
       <li key={genus.id}>
-        <Link to={`/species/${genus.species.id}`}>{genus.species.name}</Link>
+        <Link to={apiUrl + `/species/${genus.species.id}`}>{genus.species.name}</Link>
       </li>
     ))
 
