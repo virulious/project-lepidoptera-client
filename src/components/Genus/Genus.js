@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { getGenus } from '../../api/auth'
-import apiUrl from '../apiConfig'
+import apiUrl from '../../apiConfig'
 
 import Layout from '../layout/layout'
 
