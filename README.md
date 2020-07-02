@@ -41,8 +41,8 @@ Website:
 
 ERD:
 
-![ERD](https://imgur.com/a/HmzECFI)
+![ERD](https://i.imgur.com/iloEfVB.jpg)
 
 Wireframe:
 
-![Wireframe](https://imgur.com/a/Iyy9msw)
+![Wireframe](https://i.imgur.com/cQcMkQ5.jpg)
