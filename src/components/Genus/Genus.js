@@ -9,19 +9,19 @@ class Genus extends Component {
     super(props)
 
     this.state = {
-      genus: []
+      genera: []
     }
   }
 
   componentDidMount () {
     const { user } = this.props
     getGenus(user)
-      .then(res => this.setState({ genus: res.data.genus }))
+      .then(res => this.setState({ genera: res.data.genus }))
       .catch(console.error)
   }
 
   render () {
-    const genus = this.state.genus.map(genus => (
+    const genera = this.state.genera.map(genus => (
       <li key={genus.id}>
         <Link to={`/genus/${genus.id}`}>{genus.name}</Link>
       </li>
@@ -31,7 +31,7 @@ class Genus extends Component {
       <Layout>
         <h4>Genus</h4>
         <ul>
-          {genus}
+          {genera}
         </ul>
       </Layout>
     )
