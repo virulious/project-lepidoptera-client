@@ -39,7 +39,7 @@ class CreateSpecies extends Component {
       }))
       .then(() => history.push('/'))
       .catch(error => {
-        this.setState({ name: '', description: '' })
+        this.setState({ name: '', description: '', genus: '' })
         msgAlert({
           heading: 'Create Species failed with error: ' + error.message,
           message: messages.createSpeciesFailure,

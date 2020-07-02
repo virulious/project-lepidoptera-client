@@ -76,7 +76,7 @@ export const getSpecies = (user) => {
 
 export const createSpecies = (species, user) => {
   return axios({
-    url: apiUrl + '/species/' + species.createdSpeciesId,
+    url: apiUrl + '/species/' + species.id,
     method: 'POST',
     headers: {
       'Authorization': `Token ${user.token}`
