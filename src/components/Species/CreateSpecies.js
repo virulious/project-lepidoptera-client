@@ -15,9 +15,9 @@ class CreateSpecies extends Component {
       species: {
         name: '',
         description: '',
-        genus: ''
-      },
-      createdSpeciesId: null
+        genus: '',
+        id: null
+      }
     }
   }
 
@@ -31,7 +31,7 @@ class CreateSpecies extends Component {
     const { msgAlert, history } = this.props
 
     createSpecies(this.state.species, this.props.user)
-      .then(res => this.setState({ createdSpeciesId: res.data.species._id }))
+      .then(res => this.setState({ id: res.data.species._id }))
       .then(() => msgAlert({
         heading: 'Species created',
         message: messages.createSpeciesSuccess,
