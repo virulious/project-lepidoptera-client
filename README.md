@@ -37,12 +37,12 @@ Images
 
 Website:
 
-[Imgur](https://i.imgur.com/xYfTNw7.png)
+![Website](https://i.imgur.com/xYfTNw7.png)
 
 ERD:
 
-[ERD](https://imgur.com/a/HmzECFI)
+![ERD](https://imgur.com/a/HmzECFI)
 
 Wireframe:
 
-[Wireframe](https://imgur.com/a/Iyy9msw)
+![Wireframe](https://imgur.com/a/Iyy9msw)
