@@ -31,7 +31,7 @@ class CreateSpecies extends Component {
 
     const { msgAlert, history } = this.props
 
-    createSpecies(this.state.species, this.props.user)
+    createSpecies(this.state, this.props.user)
       .then(res => this.setState({ createdSpeciesId: res.data.species.id }))
       .then(() => msgAlert({
         heading: 'Species created',
