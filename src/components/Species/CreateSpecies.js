@@ -50,7 +50,7 @@ class CreateSpecies extends Component {
   }
 
   render () {
-    const { name, description, genus } = this.state.species
+    const { species } = this.state
 
     return (
       <div className="row">
@@ -63,7 +63,7 @@ class CreateSpecies extends Component {
                 required
                 type="text"
                 name="name"
-                value={name}
+                value={species.name}
                 placeholder="Species name"
                 onChange={this.handleChange}
               />
@@ -74,7 +74,7 @@ class CreateSpecies extends Component {
                 required
                 type="text"
                 name="description"
-                value={description}
+                value={species.description}
                 placeholder="Species description"
                 onChange={this.handleChange}
               />
@@ -85,7 +85,7 @@ class CreateSpecies extends Component {
                 required
                 type="text"
                 name="genus"
-                value={genus}
+                value={species.genus}
                 placeholder="Species Genus"
                 onChange={this.handleChange}
               />
