@@ -101,3 +101,13 @@ export const oneSpecies = (species, user) => {
     }
   })
 }
+
+export const deleteSpecies = (species, user) => {
+  return axios({
+    url: apiUrl + '/species/' + species.id,
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Token ${user.token}`
+    }
+  })
+}

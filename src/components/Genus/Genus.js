@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { getGenus } from '../../api/auth'
 
 import Layout from '../layout/layout'
@@ -23,7 +22,7 @@ class Genus extends Component {
   render () {
     const genera = this.state.genera.map(genus => (
       <li key={genus.id}>
-        <Link to={`/genus/${genus.id}`}>{genus.name}</Link>
+        <p>{genus.name}</p>
       </li>
     ))
 
