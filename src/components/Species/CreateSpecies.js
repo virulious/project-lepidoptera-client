@@ -16,9 +16,9 @@ class CreateSpecies extends Component {
         name: '',
         description: '',
         genus: '',
-        owner: ''
-      },
-      id: null
+        owner: '',
+        id: null
+      }
     }
   }
 
