@@ -50,7 +50,7 @@ class CreateSpecies extends Component {
   }
 
   render () {
-    const { name, description, genus } = this.state.species
+    const { name, description, genus } = this.state
 
     return (
       <div className="row">
