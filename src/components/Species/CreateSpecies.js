@@ -18,7 +18,7 @@ class CreateSpecies extends Component {
         genus: '',
         owner: ''
       },
-      createdSpeciesId: null
+      Id: null
     }
   }
 
@@ -32,7 +32,7 @@ class CreateSpecies extends Component {
     const { msgAlert, history } = this.props
 
     createSpecies(this.state, this.props.user)
-      .then(res => this.setState({ createdSpeciesId: res.data.species.id }))
+      .then(res => this.setState({ Id: res.data.species.id }))
       .then(() => msgAlert({
         heading: 'Species created',
         message: messages.createSpeciesSuccess,
