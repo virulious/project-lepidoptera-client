@@ -18,7 +18,7 @@ class CreateSpecies extends Component {
         genus: '',
         owner: ''
       },
-      createdSpeciedId: null
+      createdSpeciesId: null
     }
   }
 
