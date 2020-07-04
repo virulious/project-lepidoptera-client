@@ -23,7 +23,6 @@ class Genus extends Component {
     const genera = this.state.genera.map(genus => (
       <li key={genus.id}>
         <p>{genus.name}</p>
-        {genus.species_set.all()}
       </li>
     ))
 
