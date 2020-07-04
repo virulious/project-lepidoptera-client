@@ -111,3 +111,13 @@ export const deleteSpecies = (species, user) => {
     }
   })
 }
+
+export const updateSpecies = (species, user) => {
+  return axios({
+    url: apiUrl + '/species/' + species.id,
+    method: 'POST',
+    headers: {
+      'Authorization': `Token ${user.token}`
+    }
+  })
+}
