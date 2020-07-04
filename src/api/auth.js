@@ -118,6 +118,13 @@ export const updateSpecies = (species, user) => {
     method: 'POST',
     headers: {
       'Authorization': `Token ${user.token}`
+    },
+    data: {
+      species: {
+        name: species.name,
+        description: species.description,
+        genus: species.genus
+      }
     }
   })
 }

@@ -15,7 +15,7 @@ class Genus extends Component {
   componentDidMount () {
     const { user } = this.props
     getGenus(user)
-      .then(res => console.log(res.data) && this.setState({ genera: res.data.genus }))
+      .then(res => this.setState({ genera: res.data }))
       .catch(console.error)
   }
 
