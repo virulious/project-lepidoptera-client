@@ -20,7 +20,7 @@ class Genus extends Component {
   }
 
   render () {
-    const genera = this.state.genus.map(genus => (
+    const genera = this.state.map(genus => (
       <li key={genus.id}>
         <p>{genus.name}</p>
       </li>
