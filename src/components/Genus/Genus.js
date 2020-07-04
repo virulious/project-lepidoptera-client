@@ -15,12 +15,12 @@ class Genus extends Component {
   componentDidMount () {
     const { user } = this.props
     getGenus(user)
-      .then(res => this.setState({ genera: res.data.genus }))
+      .then(res => console.log(res.data) && this.setState({ genera: res.data.genus }))
       .catch(console.error)
   }
 
   render () {
-    const genera = this.state.map(genus => (
+    const genera = this.state.genera.map(genus => (
       <li key={genus.id}>
         <p>{genus.name}</p>
       </li>
