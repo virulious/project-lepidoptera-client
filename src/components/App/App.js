@@ -8,7 +8,7 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
-import Genus from '../Genus/Genus'
+import { Genus, OneGenus } from '../Genus/Genus'
 import CreateSpecies from '../Species/CreateSpecies'
 
 class App extends Component {
@@ -58,6 +58,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/genus/' render={() => (
             <Genus msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/genus/:id' render={() => (
+            <OneGenus msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/create-species/' render={() => (
             <CreateSpecies msgAlert={this.msgAlert} user={user} />
