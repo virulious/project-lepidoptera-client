@@ -14,7 +14,7 @@ class OneGenus extends Component {
 
   componentDidMount () {
     console.log(this.props)
-    console.log(this.query)
+    console.log(this.item)
     const { genus, user } = this.props
     oneGenus(genus, user)
       .then(res => this.setState({ species: res.data }))
