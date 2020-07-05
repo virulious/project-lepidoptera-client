@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 import Layout from '../layout/layout'
 
 class OneGenus extends Component {
-  constructor (props, item) {
-    super(props, item)
+  constructor (props, params) {
+    super(props, params)
 
     this.state = {
       species: []
@@ -15,7 +15,7 @@ class OneGenus extends Component {
 
   componentDidMount () {
     console.log(this.props)
-    console.log(this.item)
+    console.log(this.params)
     const { user } = this.props
     oneGenus(this.props.match.params.id, user)
       .then(res => this.setState({ species: res.data }))

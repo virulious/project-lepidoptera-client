@@ -24,12 +24,7 @@ class Genus extends Component {
   render () {
     const genera = this.state.genera.map(genus => (
       <li key={genus.id}>
-        <Link to={{
-          pathname: `/genus/${genus.id}`,
-          item: {
-            genus: { genus }
-          }
-        }}>
+        <Link to={`/genus/${genus.id}`} params={{ genus: genus }}>
           {genus.name}
         </Link>
       </li>
