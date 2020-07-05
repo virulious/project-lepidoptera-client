@@ -17,7 +17,8 @@ class OneGenus extends Component {
     console.log(this.props)
     console.log(this.params)
     const { user } = this.props
-    oneGenus(this.props.match.params.id, user)
+    const { genus } = this.props.matchs.params
+    oneGenus(genus, user)
       .then(res => this.setState({ species: res.data }))
       .catch(console.error)
   }

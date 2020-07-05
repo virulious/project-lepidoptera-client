@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { getGenus } from '../../api/auth'
 import { Link } from 'react-router-dom'
-import { withRouter } from 'react-router'
+import { withRouter, Router } from 'react-router'
 
 import Layout from '../layout/layout'
+const RouteHandler = Router.RouteHandler
 
 class Genus extends Component {
   constructor (props) {
@@ -27,6 +28,7 @@ class Genus extends Component {
         <Link to={`/genus/${genus.id}`} params={{ genus: genus }}>
           {genus.name}
         </Link>
+        <RouteHandler/>
       </li>
     ))
 
