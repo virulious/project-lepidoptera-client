@@ -34,6 +34,8 @@ Unsolved Problems
 - Populating Families
 - Populating Sub Families
 - Populating Tribes
+- Update species
+- Delete species
 
 Images
 

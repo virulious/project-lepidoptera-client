@@ -11,6 +11,7 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import Genus from '../Genus/Genus'
 import OneGenus from '../Genus/OneGenus'
 import CreateSpecies from '../Species/CreateSpecies'
+import OneSpecies from '../Species/OneSpecies'
 
 class App extends Component {
   constructor () {
@@ -62,6 +63,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/genus/:id/' render={() => (
             <OneGenus msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/species/:id/' render={() => (
+            <OneSpecies msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/create-species/' render={() => (
             <CreateSpecies msgAlert={this.msgAlert} user={user} />
