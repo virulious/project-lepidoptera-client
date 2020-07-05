@@ -25,7 +25,7 @@ class Genus extends Component {
       <li key={genus.id}>
         <Link to={{
           pathname: `/genus/${genus.id}`,
-          query: { id: { genus } } }}>
+          query: { genus: { genus } } }}>
           {genus.name}
         </Link>
       </li>
