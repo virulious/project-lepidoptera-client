@@ -8,7 +8,8 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
-import { Genus, OneGenus } from '../Genus/Genus'
+import Genus from '../Genus/Genus'
+import OneGenus from '../Genus/OneGenus'
 import CreateSpecies from '../Species/CreateSpecies'
 
 class App extends Component {
