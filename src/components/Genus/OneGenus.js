@@ -28,7 +28,7 @@ class OneGenus extends Component {
 
     return (
       <Layout>
-        <h4>Genus</h4>
+        <h4>Species</h4>
         <ul>
           {species}
         </ul>
