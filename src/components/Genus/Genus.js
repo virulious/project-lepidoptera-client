@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { getGenus } from '../../api/auth'
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
 
 import Layout from '../layout/layout'
 
@@ -45,4 +46,4 @@ class Genus extends Component {
   }
 }
 
-export default Genus
+export default withRouter(Genus)
