@@ -4,8 +4,8 @@ import { oneGenus } from '../../api/auth'
 import Layout from '../layout/layout'
 
 class OneGenus extends Component {
-  constructor (props) {
-    super(props)
+  constructor (props, item) {
+    super(props, item)
 
     this.state = {
       species: []
