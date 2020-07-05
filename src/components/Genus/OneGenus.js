@@ -14,6 +14,7 @@ class OneGenus extends Component {
 
   componentDidMount () {
     const { user } = this.props
+    console.log(this.props)
     oneGenus(user)
       .then(res => this.setState({ species: res.data }))
       .catch(console.error)

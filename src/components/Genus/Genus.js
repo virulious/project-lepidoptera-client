@@ -9,8 +9,7 @@ class Genus extends Component {
     super(props)
 
     this.state = {
-      genera: [],
-      species: []
+      genera: []
     }
   }
 
@@ -24,10 +23,7 @@ class Genus extends Component {
   render () {
     const genera = this.state.genera.map(genus => (
       <li key={genus.id}>
-        <Link to={{
-          pathname: `/genus/${genus.id}`,
-          query: { props: this.props.user }
-        }}>
+        <Link to={`/genus/${genus.id}`}>
           {genus.name}
         </Link>
       </li>
