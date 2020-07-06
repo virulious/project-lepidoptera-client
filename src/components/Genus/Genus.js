@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getGenus } from '../../api/auth'
-import { Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
 import Layout from '../layout/layout'
@@ -24,19 +24,21 @@ class Genus extends Component {
   render () {
     const genera = this.state.genera.map(genus => (
       <li key={genus.id}>
-        <Link to={location => ({ ...location, pathname: `/genus/${genus.id}` })}>
+        <Link to={{ pathname: `/genus/${genus.id}`, query: { genus } }} >
           {genus.name}
         </Link>
       </li>
     ))
 
     return (
-      <Layout>
-        <h4>Genus</h4>
-        <ul>
-          {genera}
-        </ul>
-      </Layout>
+      <Router>
+        <Layout>
+          <h4>Genus</h4>
+          <ul>
+            {genera}
+          </ul>
+        </Layout>
+      </Router>
     )
   }
 }
