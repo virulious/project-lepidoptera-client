@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { oneGenus } from '../../api/auth'
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
 
 import Layout from '../layout/layout'
 
@@ -39,4 +40,4 @@ class OneGenus extends Component {
   }
 }
 
-export default OneGenus
+export default withRouter(OneGenus)
