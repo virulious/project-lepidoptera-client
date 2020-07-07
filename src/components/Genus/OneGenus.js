@@ -23,11 +23,19 @@ class OneGenus extends Component {
   }
 
   render () {
-    const species = this.state.species.map(species => (
-      <li key={species.id}>
-        <Link to={`/species/${species.id}`}>{species.name}</Link>
-      </li>
-    ))
+    const species = this.state.species.map((genus) => {
+      const location = {
+        pathname: `${species.id}/`,
+        species: species
+      }
+      return (
+        <li key={species.id}>
+          <Link to={location} >
+            {species.name}
+          </Link>
+        </li>
+      )
+    })
 
     return (
       <Layout>
