@@ -16,7 +16,7 @@ class OneGenus extends Component {
 
   componentDidMount () {
     const { user } = this.props
-    const { genus } = this.props.match.query
+    const { genus } = this.props.location
     oneGenus(genus, user)
       .then(res => this.setState({ species: res.data }))
       .catch(console.error)

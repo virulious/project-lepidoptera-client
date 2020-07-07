@@ -22,13 +22,19 @@ class Genus extends Component {
   }
 
   render () {
-    const genera = this.state.genera.map(genus => (
-      <li key={genus.id}>
-        <Link to={`${genus.id}/`} >
-          {genus.name}
-        </Link>
-      </li>
-    ))
+    const genera = this.state.genera.map((genus) => {
+      const location = {
+        pathname: `${genus.id}/`,
+        genus: genus
+      }
+      return (
+        <li key={genus.id}>
+          <Link to={location} >
+            {genus.name}
+          </Link>
+        </li>
+      )
+    })
     return (
       <Layout>
         <h4>Genus</h4>
