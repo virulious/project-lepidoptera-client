@@ -66,7 +66,7 @@ export const getGenus = (user) => {
 
 export const oneGenus = (genus, user) => {
   return axios({
-    url: apiUrl + `/genus/${genus.id}/`,
+    url: apiUrl + '/genus/' + genus.id,
     method: 'GET',
     headers: {
       'Authorization': `Token ${user.token}`
