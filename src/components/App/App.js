@@ -58,13 +58,13 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password/' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/genus/' render={() => (
+          <AuthenticatedRoute user={user} exact path='/genus/' render={() => (
             <Genus msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/genus/:id/' render={() => (
+          <AuthenticatedRoute user={user} exact path='/genus/:id/' render={() => (
             <OneGenus msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/species/:id/' render={() => (
+          <AuthenticatedRoute user={user} exact path='/species/:id/' render={() => (
             <OneSpecies msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/create-species/' render={() => (
