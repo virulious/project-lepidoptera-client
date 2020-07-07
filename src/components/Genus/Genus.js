@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getGenus } from '../../api/auth'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
 import Layout from '../layout/layout'
@@ -29,16 +29,13 @@ class Genus extends Component {
         </Link>
       </li>
     ))
-
     return (
-      <Router>
-        <Layout>
-          <h4>Genus</h4>
-          <ul>
-            {genera}
-          </ul>
-        </Layout>
-      </Router>
+      <Layout>
+        <h4>Genus</h4>
+        <ul>
+          {genera}
+        </ul>
+      </Layout>
     )
   }
 }
