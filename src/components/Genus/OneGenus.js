@@ -15,6 +15,8 @@ class OneGenus extends Component {
   }
 
   componentDidMount () {
+    console.log(this.props)
+    console.log(this.props.location)
     const { user } = this.props
     const { genus } = this.props.location
     oneGenus(genus, user)
