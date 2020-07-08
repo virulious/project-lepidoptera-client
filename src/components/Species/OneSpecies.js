@@ -31,11 +31,12 @@ class OneSpecies extends Component {
       .catch(console.error)
   }
 
-  handleChange = event => this.setState({
-    species: {
-      [event.target.name]: event.target.value
-    }
-  })
+  handleChange = (event) => {
+    const updatedField = { [event.target.name]: event.target.value }
+    this.setState(currentState => {
+      return { species: { ...currentState.species, ...updatedField } }
+    })
+  }
 
   destroy = () => {
     const { user, msgAlert } = this.props
