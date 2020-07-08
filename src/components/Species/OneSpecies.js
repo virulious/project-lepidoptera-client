@@ -38,7 +38,7 @@ class OneSpecies extends Component {
 
   destroy = () => {
     const { user, msgAlert } = this.props
-    const { species } = this.props.match.params
+    const { species } = this.state
     deleteSpecies(species, user)
       .then(() => this.setState({ deleted: true }))
       .then(() => msgAlert({
