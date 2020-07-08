@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory as history } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 import { oneSpecies, deleteSpecies, updateSpecies } from '../../api/auth.js'
 import Layout from '../layout/layout'
-import { browserHistory as history, withRouter } from 'react-router'
+import { withRouter } from 'react-router'
 import messages from '../AutoDismissAlert/messages'
 
 class OneSpecies extends Component {
