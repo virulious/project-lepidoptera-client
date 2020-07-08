@@ -27,6 +27,10 @@ class OneSpecies extends Component {
       .catch(console.error)
   }
 
+  handleChange = event => this.setState({
+    [event.target.name]: event.target.value
+  })
+
   destroy = () => {
     const { user, msgAlert } = this.props
     const { species } = this.state
@@ -46,10 +50,6 @@ class OneSpecies extends Component {
         })
       })
   }
-
-  handleChange = event => this.setState({
-    [event.target.name]: event.target.value
-  })
 
   onUpdateSpecies = event => {
     event.preventDefault()
@@ -77,6 +77,7 @@ class OneSpecies extends Component {
   render () {
     const { species } = this.state
     const { name, description, genus } = this.state.species
+    console.log(species)
 
     if (!species) {
       return <p>Loading...</p>
