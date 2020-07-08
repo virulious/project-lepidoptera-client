@@ -27,6 +27,7 @@ class OneSpecies extends Component {
     const { species } = this.props.location
     oneSpecies(species, user)
       .then(res => this.setState({ species: res.data }))
+      .then(() => console.log(this.state))
       .catch(console.error)
   }
 
@@ -40,7 +41,6 @@ class OneSpecies extends Component {
     const { user, msgAlert } = this.props
     const { species } = this.state
     deleteSpecies(species, user)
-      .then(() => this.setState({ deleted: true }))
       .then(() => msgAlert({
         heading: 'Delete species successful',
         message: messages.deleteSpeciesSuccess,
