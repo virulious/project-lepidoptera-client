@@ -132,7 +132,7 @@ class OneSpecies extends Component {
               </Form.Group>
               <Button
                 variant="primary"
-                type="https://github.com/virulious/project-lepidoptera-apisubmit"
+                type="submit"
               >
                 Submit
               </Button>
