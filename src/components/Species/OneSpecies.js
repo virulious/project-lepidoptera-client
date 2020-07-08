@@ -16,8 +16,9 @@ class Species extends Component {
 
   componentDidMount () {
     console.log(this.props)
-    console.log(this.props.location)
-    oneSpecies(this.props.location.params.id, this.props.user)
+    const { user } = this.props
+    const { species } = this.props.location
+    oneSpecies(species, user)
       .then(res => this.setState({ species: res.data.species }))
       .catch(console.error)
   }
@@ -46,9 +47,6 @@ class Species extends Component {
         <h4>{species.name}</h4>
         <p>Description: {species.description}</p>
         <button onClick={this.destroy}>Delete Species</button>
-        <Link to={`/species/${this.props.match.params.id}/edit`}>
-          <button>Edit</button>
-        </Link>
         <Link to="/genus/">Back to genus</Link>
       </Layout>
     )
