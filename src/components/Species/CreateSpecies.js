@@ -80,7 +80,7 @@ class CreateSpecies extends Component {
               />
             </Form.Group>
             <Form.Group controlId="genus">
-              <Form.Label>Species Genus</Form.Label>
+              <Form.Label>Species Genus. Morpho(1) Antirrhea(2)</Form.Label>
               <Form.Control
                 required
                 type="text"
