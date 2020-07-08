@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 import { oneSpecies, deleteSpecies, updateSpecies } from '../../api/auth.js'
 import Layout from '../layout/layout'
-import { withRouter } from 'react-router'
+import { browserHistory as history, withRouter } from 'react-router'
 import messages from '../AutoDismissAlert/messages'
 
 class OneSpecies extends Component {
