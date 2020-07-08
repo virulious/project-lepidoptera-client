@@ -27,7 +27,9 @@ class OneSpecies extends Component {
   }
 
   handleChange = event => this.setState({
-    [event.target.name]: event.target.value
+    species: {
+      [event.target.name]: event.target.value
+    }
   })
 
   destroy = () => {
