@@ -15,7 +15,9 @@ class Species extends Component {
   }
 
   componentDidMount () {
-    oneSpecies(this.props.match.params.id, this.props.user)
+    console.log(this.props)
+    console.log(this.props.location)
+    oneSpecies(this.props.location.params.id, this.props.user)
       .then(res => this.setState({ species: res.data.species }))
       .catch(console.error)
   }
