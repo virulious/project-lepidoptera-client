@@ -33,8 +33,8 @@ class OneSpecies extends Component {
         heading: 'Delete species successful',
         message: messages.deleteSpeciesSuccess,
         variant: 'success'
-      })
-      )
+      }))
+      .then(() => history.push('/'))
       .catch(error => {
         msgAlert({
           heading: 'Delete Species failed with error: ' + error.message,
@@ -45,16 +45,10 @@ class OneSpecies extends Component {
   }
 
   render () {
-    const { species, deleted } = this.state
+    const { species } = this.state
 
     if (!species) {
       return <p>Loading...</p>
-    }
-
-    if (deleted) {
-      return <Redirect to={
-        { pathname: '/', state: { msg: 'Species succesfully deleted!' } }
-      } />
     }
 
     return (
