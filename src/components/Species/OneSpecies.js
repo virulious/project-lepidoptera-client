@@ -14,8 +14,7 @@ class OneSpecies extends Component {
     super(props)
 
     this.state = {
-      species: {},
-      deleted: false
+      species: {}
     }
   }
 
@@ -77,7 +76,6 @@ class OneSpecies extends Component {
   render () {
     const { species } = this.state
     const { name, description, genus } = this.state.species
-    console.log(species)
 
     if (!species) {
       return <p>Loading...</p>
@@ -90,7 +88,7 @@ class OneSpecies extends Component {
         <button onClick={this.destroy}>Delete Species</button>
         <div className="row">
           <div className="col-sm-10 col-md-8 mx-auto mt-5">
-            <h3>Species</h3>
+            <h3>Update Fields</h3>
             <Form onSubmit={this.onUpdateSpecies}>
               <Form.Group controlId="name">
                 <Form.Label>Species Name</Form.Label>
