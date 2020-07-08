@@ -16,11 +16,10 @@ class OneSpecies extends Component {
   }
 
   componentDidMount () {
-    console.log(this.props)
     const { user } = this.props
     const { species } = this.props.location
     oneSpecies(species, user)
-      .then(res => this.setState({ species: res.data.species }))
+      .then(res => this.setState({ species: res.data }))
       .catch(console.error)
   }
 
