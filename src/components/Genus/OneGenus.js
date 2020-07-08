@@ -23,7 +23,7 @@ class OneGenus extends Component {
   }
 
   render () {
-    const species = this.state.species.map((genus) => {
+    const species = this.state.species.map((species) => {
       const location = {
         pathname: `/species/${species.id}/`,
         species: species
