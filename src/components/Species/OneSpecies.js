@@ -48,8 +48,7 @@ class OneSpecies extends Component {
       }))
       .then(() => history.push('/'))
       .catch(error => {
-        msgAlert({
-          heading: 'Delete Species failed with error: ' + error.message,
+        msgAlert({ heading: 'Delete Species failed with error: ' + error.message,
           message: messages.deleteSpeciesFailure,
           variant: 'danger'
         })
