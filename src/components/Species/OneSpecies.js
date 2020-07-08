@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, useHistory as history } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -27,7 +27,6 @@ class OneSpecies extends Component {
     const { species } = this.props.location
     oneSpecies(species, user)
       .then(res => this.setState({ species: res.data }))
-      .then(() => console.log(this.state))
       .catch(console.error)
   }
 
@@ -61,9 +60,6 @@ class OneSpecies extends Component {
 
     const { msgAlert, history, user } = this.props
     const { species } = this.state
-    console.log(this.props)
-    console.log(this.state)
-    console.log(species)
 
     updateSpecies(species, user)
       .then(res => this.setState({ species: res.data }))
