@@ -4,6 +4,7 @@ import { Link, Redirect } from 'react-router-dom'
 import { oneSpecies, deleteSpecies } from '../../api/auth.js'
 import Layout from '../layout/layout'
 import { withRouter } from 'react-router'
+import messages from '../AutoDismissAlert/messages'
 
 class OneSpecies extends Component {
   constructor (props) {
@@ -24,11 +25,18 @@ class OneSpecies extends Component {
   }
 
   destroy = () => {
-    const { user } = this.props
+    const { user, msgAlert } = this.props
     const { species } = this.state
+    console.log(species)
     deleteSpecies(species, user)
       .then(() => this.setState({ deleted: true }))
-      .catch(console.error)
+      .catch(error => {
+        msgAlert({
+          heading: 'Delete Species failed with error: ' + error.message,
+          message: messages.deleteSpeciesFailure,
+          variant: 'danger'
+        })
+      })
   }
 
   render () {

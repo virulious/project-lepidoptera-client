@@ -9,5 +9,7 @@ export default {
   createSpeciesSuccess: 'Species created successfully!',
   createSpeciesFailure: 'Failed to create Species',
   createGenusSuccess: 'Genus created successfully!',
-  createGenusFailure: 'Failed to create Genus'
+  createGenusFailure: 'Failed to create Genus',
+  deleteSpeceisFailure: 'Failed to delete species',
+  updateSpeciesFailuer: 'Failed to update species'
 }
