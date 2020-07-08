@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-import { oneSpecies, deleteSpecies } from '../../api/auth.js'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+
+import { oneSpecies, deleteSpecies, updateSpecies } from '../../api/auth.js'
 import Layout from '../layout/layout'
 import { withRouter } from 'react-router'
 import messages from '../AutoDismissAlert/messages'
@@ -44,6 +47,33 @@ class OneSpecies extends Component {
       })
   }
 
+  handleChange = event => this.setState({
+    [event.target.name]: event.target.value
+  })
+
+  onUpdateSpecies = event => {
+    event.preventDefault()
+
+    const { msgAlert, history, user } = this.props
+    const { species } = this.state
+
+    updateSpecies(species, user)
+      .then(res => this.setState({ species: res.data }))
+      .then(() => msgAlert({
+        heading: 'Species updated',
+        message: messages.updateSpeciesSuccess,
+        variant: 'success'
+      }))
+      .then(() => history.push('/'))
+      .catch(error => {
+        msgAlert({
+          heading: 'Update Species failed with error: ' + error.message,
+          message: messages.updateSpeciesFailure,
+          variant: 'danger'
+        })
+      })
+  }
+
   render () {
     const { species } = this.state
 
@@ -56,6 +86,52 @@ class OneSpecies extends Component {
         <h4>{species.name}</h4>
         <p>Description: {species.description}</p>
         <button onClick={this.destroy}>Delete Species</button>
+        <div className="row">
+          <div className="col-sm-10 col-md-8 mx-auto mt-5">
+            <h3>Species</h3>
+            <Form onSubmit={this.onUpdateSpecies}>
+              <Form.Group controlId="name">
+                <Form.Label>Species Name</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="name"
+                  value={species.name}
+                  placeholder="Species name"
+                  onChange={this.handleChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="description">
+                <Form.Label>Species description</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="description"
+                  value={species.description}
+                  placeholder="Species description"
+                  onChange={this.handleChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="genus">
+                <Form.Label>Species Genus</Form.Label>
+                <Form.Control
+                  required
+                  type="text"
+                  name="genus"
+                  value={species.genus}
+                  placeholder="Species Genus"
+                  onChange={this.handleChange}
+                />
+              </Form.Group>
+              <Button
+                variant="primary"
+                type="submit"
+              >
+                Submit
+              </Button>
+            </Form>
+          </div>
+        </div>
         <Link to="/genus/">Back to genus</Link>
       </Layout>
     )
