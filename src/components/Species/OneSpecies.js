@@ -55,6 +55,8 @@ class OneSpecies extends Component {
 
     const { msgAlert, history, user } = this.props
     const { species } = this.state
+    console.log(this.props)
+    console.log(this.state)
     console.log(species)
 
     updateSpecies(species, user)
