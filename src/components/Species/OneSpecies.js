@@ -14,7 +14,11 @@ class OneSpecies extends Component {
     super(props)
 
     this.state = {
-      species: {}
+      species: {
+        name: '',
+        description: '',
+        genus: ''
+      }
     }
   }
 
@@ -34,7 +38,7 @@ class OneSpecies extends Component {
 
   destroy = () => {
     const { user, msgAlert } = this.props
-    const { species } = this.state
+    const { species } = this.props.match.params
     deleteSpecies(species, user)
       .then(() => this.setState({ deleted: true }))
       .then(() => msgAlert({
