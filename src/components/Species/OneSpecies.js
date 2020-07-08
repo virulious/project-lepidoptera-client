@@ -18,13 +18,15 @@ class OneSpecies extends Component {
   componentDidMount () {
     const { user } = this.props
     const { species } = this.props.location
+    console.log(species)
     oneSpecies(species, user)
       .then(res => this.setState({ species: res.data }))
       .catch(console.error)
   }
 
   destroy = (species) => {
-    deleteSpecies(species, this.props.user)
+    const { user } = this.props
+    deleteSpecies(species, user)
       .then(() => this.setState({ deleted: true }))
       .catch(console.error)
   }
