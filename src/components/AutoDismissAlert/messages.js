@@ -13,5 +13,6 @@ export default {
   deleteSpeciesSuccess: 'Species deleted successfully',
   deleteSpeceisFailure: 'Failed to delete species',
   updateSpeciesSuccess: 'Species updated successfully',
-  updateSpeciesFailure: 'Failed to update species'
+  updateSpeciesFailure: 'Failed to update species',
+  failedToMount: 'Mount failed'
 }

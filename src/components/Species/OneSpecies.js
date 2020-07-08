@@ -23,11 +23,16 @@ class OneSpecies extends Component {
   }
 
   componentDidMount () {
-    const { user } = this.props
+    const { user, msgAlert } = this.props
     const { species } = this.props.location
     oneSpecies(species, user)
       .then(res => this.setState({ species: res.data }))
-      .catch(console.error)
+      .catch(error => {
+        msgAlert({ heading: 'Failed to mount with error: ' + error.message,
+          message: messages.failedToMount,
+          variant: 'danger'
+        })
+      })
   }
 
   handleChange = (event) => {

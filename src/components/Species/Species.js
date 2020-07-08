@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { getSpecies } from '../../api/auth'
 
 import Layout from '../layout/layout'
+import messages from '../AutoDismissAlert/messages'
 
 class Species extends Component {
   constructor (props) {
@@ -14,9 +15,15 @@ class Species extends Component {
   }
 
   componentDidMount () {
+    const { msgAlert } = this.props
     getSpecies(this.props.user)
       .then(res => this.setState({ species: res.data.species }))
-      .catch(console.error)
+      .catch(error => {
+        msgAlert({ heading: 'Failed to mount with error: ' + error.message,
+          message: messages.failedToMount,
+          variant: 'danger'
+        })
+      })
   }
 
   render () {

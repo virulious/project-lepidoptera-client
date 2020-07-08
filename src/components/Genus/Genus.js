@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router'
 
 import Layout from '../layout/layout'
+import messages from '../AutoDismissAlert/messages'
 
 class Genus extends Component {
   constructor (props) {
@@ -15,10 +16,15 @@ class Genus extends Component {
   }
 
   componentDidMount () {
-    const { user } = this.props
+    const { user, msgAlert } = this.props
     getGenus(user)
       .then(res => this.setState({ genera: res.data }))
-      .catch(console.error)
+      .catch(error => {
+        msgAlert({ heading: 'Failed to mount with error: ' + error.message,
+          message: messages.failedToMount,
+          variant: 'danger'
+        })
+      })
   }
 
   render () {
