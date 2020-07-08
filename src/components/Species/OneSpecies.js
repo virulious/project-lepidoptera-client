@@ -23,8 +23,9 @@ class OneSpecies extends Component {
       .catch(console.error)
   }
 
-  destroy = (species) => {
+  destroy = () => {
     const { user } = this.props
+    const { species } = this.state
     deleteSpecies(species, user)
       .then(() => this.setState({ deleted: true }))
       .catch(console.error)
