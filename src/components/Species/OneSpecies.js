@@ -3,8 +3,9 @@ import { Link, Redirect } from 'react-router-dom'
 
 import { oneSpecies, deleteSpecies } from '../../api/auth.js'
 import Layout from '../layout/layout'
+import { withRouter } from 'react-router'
 
-class Species extends Component {
+class OneSpecies extends Component {
   constructor (props) {
     super(props)
 
@@ -53,4 +54,4 @@ class Species extends Component {
   }
 }
 
-export default Species
+export default withRouter(OneSpecies)
