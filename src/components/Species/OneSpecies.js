@@ -10,7 +10,7 @@ class OneSpecies extends Component {
     super(props)
 
     this.state = {
-      species: null,
+      species: {},
       deleted: false
     }
   }
@@ -18,7 +18,6 @@ class OneSpecies extends Component {
   componentDidMount () {
     const { user } = this.props
     const { species } = this.props.location
-    console.log(species)
     oneSpecies(species, user)
       .then(res => this.setState({ species: res.data }))
       .catch(console.error)
