@@ -57,6 +57,7 @@ class OneSpecies extends Component {
 
     const { msgAlert, history, user } = this.props
     const { species } = this.state
+    console.log(species)
 
     updateSpecies(species, user)
       .then(res => this.setState({ species: res.data }))
