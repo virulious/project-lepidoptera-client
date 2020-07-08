@@ -76,6 +76,7 @@ class OneSpecies extends Component {
 
   render () {
     const { species } = this.state
+    const { name, description, genus } = this.state.species
 
     if (!species) {
       return <p>Loading...</p>
@@ -93,10 +94,9 @@ class OneSpecies extends Component {
               <Form.Group controlId="name">
                 <Form.Label>Species Name</Form.Label>
                 <Form.Control
-                  required
                   type="text"
                   name="name"
-                  value={species.name}
+                  value={name}
                   placeholder="Species name"
                   onChange={this.handleChange}
                 />
@@ -104,10 +104,9 @@ class OneSpecies extends Component {
               <Form.Group controlId="description">
                 <Form.Label>Species description</Form.Label>
                 <Form.Control
-                  required
                   type="text"
                   name="description"
-                  value={species.description}
+                  value={description}
                   placeholder="Species description"
                   onChange={this.handleChange}
                 />
@@ -115,10 +114,9 @@ class OneSpecies extends Component {
               <Form.Group controlId="genus">
                 <Form.Label>Species Genus</Form.Label>
                 <Form.Control
-                  required
                   type="text"
                   name="genus"
-                  value={species.genus}
+                  value={genus}
                   placeholder="Species Genus"
                   onChange={this.handleChange}
                 />
