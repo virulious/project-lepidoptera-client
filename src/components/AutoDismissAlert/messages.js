@@ -10,6 +10,8 @@ export default {
   createSpeciesFailure: 'Failed to create Species',
   createGenusSuccess: 'Genus created successfully!',
   createGenusFailure: 'Failed to create Genus',
+  deleteSpeciesSuccess: 'Species deleted successfully',
   deleteSpeceisFailure: 'Failed to delete species',
+  updateSpeciesSuccess: 'Species updated successfully',
   updateSpeciesFailuer: 'Failed to update species'
 }

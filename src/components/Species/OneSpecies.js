@@ -29,6 +29,12 @@ class OneSpecies extends Component {
     const { species } = this.state
     deleteSpecies(species, user)
       .then(() => this.setState({ deleted: true }))
+      .then(() => msgAlert({
+        heading: 'Delete species successful',
+        message: messages.deleteSpeciesSuccess,
+        variant: 'success'
+      })
+      )
       .catch(error => {
         msgAlert({
           heading: 'Delete Species failed with error: ' + error.message,
