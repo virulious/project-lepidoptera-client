@@ -98,7 +98,7 @@ class OneSpecies extends Component {
                   type="text"
                   name="name"
                   value={name}
-                  placeholder="Species name"
+                  placeholder={this.name}
                   onChange={this.handleChange}
                 />
               </Form.Group>
@@ -108,7 +108,7 @@ class OneSpecies extends Component {
                   type="text"
                   name="description"
                   value={description}
-                  placeholder="Species description"
+                  placeholder={this.description}
                   onChange={this.handleChange}
                 />
               </Form.Group>
@@ -118,7 +118,7 @@ class OneSpecies extends Component {
                   type="text"
                   name="genus"
                   value={genus}
-                  placeholder="Species Genus"
+                  placeholder={this.genus}
                   onChange={this.handleChange}
                 />
               </Form.Group>
