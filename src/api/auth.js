@@ -125,7 +125,7 @@ export const deleteSpecies = (species, user) => {
 export const updateSpecies = (species, user) => {
   return axios({
     url: apiUrl + `/species/${species.id}/`,
-    method: 'POST',
+    method: 'PATCH',
     headers: {
       'Authorization': `Token ${user.token}`
     },
